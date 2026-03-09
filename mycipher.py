@@ -3,16 +3,17 @@ import sys
 shift_amt = int(sys.argv[1])
 
 message = []
-line = sys.stdin.readline()	
-line = line.upper()
-changed_line = []	
 
-for char in line:
-	if char.isalpha():
-		changed_line.append(char)
+for line in sys.stdin:
+	line = line.upper()
+	changed_line = []	
+
+	for char in line:
+		if char.isalpha():
+			changed_line.append(char)
 		
-line = "".join(changed_line)
-message.append(line)
+	line = "".join(changed_line)
+	message.append(line)
 
 encoded_message = []
 
